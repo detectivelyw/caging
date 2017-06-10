@@ -1,0 +1,18 @@
+# This is the output for running hello_world_1.c and hello_world_2.c. 
+
+Output:
+
+<cage 1> Hello World! 01
+<cage 1> a = 96 
+<cage 1> a_ptr = 0xfffefe54 
+<cage 2> Hello World! 02
+<cage 2> a = 99 
+<cage 2> a_ptr = 0xfffefe54 
+<cage 2> a = 98 
+<cage 2> a_ptr = 0xfffefe54 
+<cage 2> a = 97 
+<cage 2> a_ptr = 0xfffefe54 
+<cage 2> a = 97 
+<cage 2> a_ptr = 0xfffefe54 
+
+
