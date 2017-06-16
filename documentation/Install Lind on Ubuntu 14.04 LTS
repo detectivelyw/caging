@@ -50,6 +50,10 @@ export LIND_MONITOR=/usr/lind_project/reference_monitor
 export PATH=/usr/lind_project/depot_tools:$PATH
 
 4.Build lind
+4.0
+NaCl's git urls was removed!
+To build correctly, need lind/nacl/native_client/tools/SRC/binutils and SRC/gcc
+
 4.1 for latest version of texinfo, 2 errors: unknown command `colophon', unknown command `cygnus'. 
 
 Solution:
