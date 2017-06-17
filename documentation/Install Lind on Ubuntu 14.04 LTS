@@ -48,6 +48,11 @@ export REPY_PATH=/usr/lind_project/repy
 export NACL_SDK_ROOT=/usr/lind_project/repy/sdk
 export LIND_MONITOR=/usr/lind_project/reference_monitor
 export PATH=/usr/lind_project/depot_tools:$PATH
+export LD_LIBRARY_PATH=/glibc/
+
+[*** note ***]: the last one(LD_LIBRARY_PATH=/glibc/) is a path in Repy's file system. 
+All the other paths are in the actual host file system.
+Because LD_LIBRARY_PATH is used by the NaCl loader, therefore, it is able to interprete the Repy path correctly.
 
 4.Build lind
 4.0
