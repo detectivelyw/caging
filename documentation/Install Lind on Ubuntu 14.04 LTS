@@ -57,7 +57,8 @@ Because LD_LIBRARY_PATH is used by the NaCl loader, therefore, it is able to int
 4.Build lind
 4.0
 NaCl's git urls was removed!
-To build correctly, need lind/nacl/native_client/tools/SRC/binutils and SRC/gcc
+So now, we need to copy the following directories in nacl/native_client/tools/SRC/
+To build correctly, need lind/nacl/native_client/tools/SRC/binutils, SRC/linux-headers-for-nacl, SRC/newlib, and SRC/gcc
 
 4.1 for latest version of texinfo, 2 errors: unknown command `colophon', unknown command `cygnus'. 
 
