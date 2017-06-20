@@ -4,6 +4,7 @@
 *                                                                           *                                  
 *  Author:  Yiwen Li                                                        *
 *  Date Created:  September 1st, 2014                                       *  
+*  Date Last Updated:  June 20th, 2017                                      *  
 *                                                                           *
 *                                                                           *
 *****************************************************************************
@@ -19,6 +20,18 @@ Repy Code Modification:
 After repy code modification, e.g. in /lind_project/lind/nacl_repy/seattlelib/
 Enter path /lind_project/lind/
 Run ./build.sh repy
+
+*****************************************************************************
+Rebuilding code after modification:
+
+
+Use build.sh under /lind_project/lind/
+1. To cleanup existing NaCl toolchain, ./build.sh cleantoolchain
+2. To compile and build glibc, ./build.sh buildglibc
+3. To update glibc with changes, ./build.sh updateglibc, try ./build.sh updateglibc2 if the previous one failed
+4. To compile and build NaCl, ./build.sh nacl 
+5. To compile and build Repy SafePOSIX lib, ./build.sh repy
+6. To installed binary code into our Repy running repository, ./build.sh install
 
 
 *****************************************************************************

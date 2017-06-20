@@ -4,6 +4,7 @@
 *                                                                           *                                  
 *  Author:  Yiwen Li                                                        *
 *  Date Created:  September 1st, 2014                                       *  
+*  Date Last Updated:  June 20th, 2017                                      * 
 *                                                                           *
 *                                                                           *
 *****************************************************************************
@@ -73,6 +74,15 @@ Solution:
    ./configure
    make
    sudo make install
+
+4.2 need gperf to complete building
+sudo apt-get update
+sudo apt-get install gperf
+
+***potential problem***
+If you did the building before having gperf installed, then there will be an empty /gcc/cp/cfns.h created, which will cause "undefined reference to libc_name_p" error.
+To solve this, delete /gcc/cp/cfns.h file and run the building again with gperf installed.
+
 
 5.Build reference_monitor
 5.1 encounter error: "/usr/bin/ld: cannot find -lcurl", although curl has been installed and is the newest version. 
