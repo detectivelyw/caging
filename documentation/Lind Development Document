@@ -12,17 +12,8 @@
 
 
 *****************************************************************************
-Changing Code and Building:                                              
+Modifying Code and Rebuilding:                                              
 Author: Yiwen Li
-
-
-Repy Code Modification:
-After repy code modification, e.g. in /lind_project/lind/nacl_repy/seattlelib/
-Enter path /lind_project/lind/
-Run ./build.sh repy
-
-*****************************************************************************
-Rebuilding code after modification:
 
 
 Use build.sh under /lind_project/lind/
@@ -50,7 +41,7 @@ Author: Shengqian Ji and Qishen Li
 
 
 *****************************************************************************
-Running a c program in Lind: (hello.c)
+Running a C program in Lind: (hello.c)
 Author: Yiwen Li
 
 
@@ -63,9 +54,12 @@ and is necessary for the program to run in Lind.
 During this step, a lind file (linddata.xxx) will be created for hello.nexe
 
 problem: if a lind file already exists, it doesn't allow recreation at the moment. 
+To update the program and test, first use "lind_fs_utils.py rm" to remove the existing file from the Lind fs, 
+then use "lind_fs_utils.py cp" to copy the updated program into the Lind fs.
 
-4. /usr/lind_project/repy/repy$ ../bin/sel_ldr -a -s -- /glibc/runnable-ld.so --library-path /glibc /hello.nexe
-   /usr/lind_project/repy/repy$ ../bin/sel_ldr -a -- /glibc/runnable-ld.so --library-path /glibc /hello.nexe
-   (Note: "-s" doesn't seem to be necessary, since stubmode is not supported.)
+4. /usr/lind_project/repy/repy$ ../bin/sel_ldr -a -s -- /glibc/runnable-ld.so --library-path /glibc /hello.nexe (NOT used anymore!)
+   /usr/lind_project/repy/repy$ ../bin/sel_ldr -a -- /glibc/runnable-ld.so --library-path /glibc /hello.nexe (Use this now!)
+   (Note: "-s" doesn't seem to be necessary now, since stubmode is not supported.)
+
 
 *****************************************************************************
