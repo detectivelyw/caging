@@ -1,0 +1,35 @@
+*****************************************************************************
+*                       CAGING DEVELOPMENT DOCUMENT                         *                            
+*                                                                           *
+*                                                                           *                                  
+*  Author:  Yiwen Li                                                        *
+*  Date Created:  July 25th, 2017                                           *  
+*  Date Last Updated:  July 25th, 2017                                      *  
+*                                                                           *
+*                                                                           *
+*****************************************************************************
+
+
+
+*****************************************************************************
+1. Cage Memory Layout (Each cage is an NaClApp)
+
+Native Client will be loaded at base address 0x
+
+Within a cage, the nap has a 32-bits memory space.
+Addresses defined in nap is relative/offset to nap->mem_start, which is called "User addr". The absolute address is called "Sys addr".
+NaCl provides functions NaClSysToUser() and NaClUserToSys() to perform the address masking and translation. 
+
+nap->mem_start has offset 0, which is the base of the cage.
+
+cage/nap memory layout:
+
+
+0x10040a2c  --> data_end
+0x1003fa20  --> data_start
+0x10020000  --> rodata_start
+0x10020000  --> dynamic_text_end
+0x50000     --> dynamic_text_start
+0x50000     --> static_text_end
+0x212e0     --> initial_entry_pt     (the first address in untrusted code to jump to)
+0x0         --> mem_start
