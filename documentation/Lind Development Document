@@ -49,6 +49,7 @@ Author: Yiwen Li
 2. Use NaCl tool chain to compile c code":o Lind file system, which is different from the normal os file system
 and is necessary for the program to run in Lind.
 /usr/lind_project/repy/repy$ $NACL_SDK_ROOT/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc -o hello.nexe hello.c
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc
 
 3. /usr/lind_project/repy/repy$ python lind_fs_utils.py cp $REPY_PATH/repy hello.nexe
 During this step, a lind file (linddata.xxx) will be created for hello.nexe
