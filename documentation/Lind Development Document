@@ -62,5 +62,6 @@ then use "lind_fs_utils.py cp" to copy the updated program into the Lind fs.
    /usr/lind_project/repy/repy$ ../bin/sel_ldr -a -- /glibc/runnable-ld.so --library-path /glibc /hello.nexe (Use this now!)
    (Note: "-s" doesn't seem to be necessary now, since stubmode is not supported.)
 
+Note: NaCl compiled binary can be named without the ".nexe" extension, and will still be able to run using our NaCl sel_ldr loader.
 
 *****************************************************************************
