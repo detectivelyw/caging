@@ -1,0 +1,481 @@
+"""
+<Program Name>
+  lind_server.repy
+
+<Start Date>
+  Dececmber 2010
+
+<Author>
+  Chris Matthews (cmatthew@cs.uvic.ca)
+  Heavily Revised by: Yiwen Li
+
+<Purpose>
+  The Lind OS Server.  This module services system calls coming from glibc
+
+"""
+
+
+include struct.repy
+include debug.repy
+include comp.repy
+include errno.repy
+include serialize.repy
+include dispatcher.repy
+include unimplemented_syscalls.repy
+include lind_rpc.repy
+include lind_parsers.repy
+include lind_fs_constants.py
+include lind_net_constants.py
+include lind_fs_calls.py
+include lind_net_calls.py
+include fs_open.repy
+include fs_openat.repy
+include fs_write.repy
+include fs_fstatfs.repy
+include fs_statfs.repy
+include fs_access.repy
+include fs_read.repy
+include fs_fstat.repy
+include fs_close.repy
+include fs_lseek.repy
+include fs_mkdir.repy
+include fs_rmdir.repy
+include fs_chdir.repy
+include fs_link.repy
+include fs_unlink.repy
+include fs_xstat.repy
+include fs_getdents.repy
+include fs_dup.repy
+include fs_dup2.repy
+include fs_dup3.repy
+include fs_fcntl.repy
+include fs_flock.repy
+include fs_rename.repy
+include sys_getpid.repy
+include sys_getuid.repy
+include sys_geteuid.repy
+include sys_getgid.repy
+include sys_getegid.repy
+include net_socket.repy
+include net_bind.repygrep
+include net_send.repy
+include net_sendto.repy
+include net_sendmsg.repy
+include net_recv.repy
+include net_recvfrom.repy
+include net_recvmsg.repy
+include net_connect.repy
+include net_listen.repy
+include net_accept.repy
+include net_getpeername.repy
+include net_getsockname.repy
+include net_getsockopt.repy
+include net_setsockopt.repy
+include net_shutdown.repy
+include net_select.repy
+include net_getifaddrs.repy
+include net_poll.repy
+include net_epoll.repy
+include net_socketpair.repy
+
+
+
+VERSION = "$Rev$"     # lind version information
+SILENT = False     # try to produce output as close as the OS would
+                   # this means no debug/error messages!
+TRACE = True     # trace system calls (somewhat like strace) 
+SYSCALL = "syscall"     # shortcut to syscall dict items
+FILES = "FILES"     # these also make a typo more specific than a dict lookup error
+COMPONENT_NUM = "component_num"     # keep record of the current component number: component number starts with 1.  
+ERRNO = "errno.h"     # define error code
+MBOX = "mbox"     # message box: keep record of messages sent to a component when a call is made
+LOCK = "lock"     # lock status
+PROGRAM = "program"     # code location
+CMD_LINE = "command_line_args"     # command line arguments 
+SUCCESS = 0     # indicate if a call is responded successfully
+PRODUCTION = False     # not sure how it is used (or even used at all?)
+COMPONENT_MODE = "component_mode"     # component mode: single or multiple components running
+FILE_MAP = {}     # keep record of file descriptors mapping in lind 
+
+
+# the size of the transmission buffer. We should never send something
+# bigger than this!
+TX_BUF_MAX = (4096 * 4) - 16   # 16 bytes of header
+RX_BUF_MAX = (4096 * 4)
+
+
+
+
+
+# check if "trace system calls" function is turned off
+# if turned off, then stop logging
+if not TRACE:
+  def log(arg):
+    # Turn off logging
+    pass
+
+
+# initialize file descriptor mapping in lind
+def init_fd_mapping():
+  # I'm not sure why...
+  for fd in (0, 1, 2):
+    FILE_MAP[fd] = fd
+
+
+# output warning message
+def warning(*msg):
+  if not SILENT:
+    for part in msg:
+      log(part),
+    log("\n")
+
+
+def assert_warning(logic, message):
+  # Like assert, but only warn
+  if not logic:
+    log("Warning: " + message)
+
+
+# return the current component without knowing the component number 
+def current_component():
+  return mycontext[mycontext[COMPONENT_NUM]]
+
+
+# return a specific component by giving the component number
+def specific_component(num):
+  return mycontext[num]
+
+
+# check if fd handle is in the valid range
+def check_valid_fd_handle(num):
+  assert isinstance(num, int)
+  assert (STARTINGFD <= num <= MAX_FD), "invalid handle %d" % num
+
+
+# keep records of execution time for each system call
+def print_times(times):
+  log("\n" + "Summary of System Call Execution Times: ")
+  prefix = ">> "  # prefix which the scripts can use to pull out these numbers
+  for eachtime in times:
+    # eachtime = call, exec_pre, exec_start, exec_post, exec_stop, exec_before, exec_after, call_args
+    call = eachtime[0]
+    # using the call number, pull the string name out of the function object
+    function_name = str(current_component()[SYSCALL][call]).split(" ")[1]
+    exec_pre = eachtime[1]
+    exec_start = eachtime[2]
+    exec_post = eachtime[3]
+    exec_stop = eachtime[4]
+    exec_before = eachtime[5]
+    exec_after = eachtime[6]
+    call_args = eachtime[7]
+    log(prefix + function_name + ", " + exec_pre + ", " + \
+        exec_start + ", " + exec_post + ", " + \
+        exec_stop + ", " + exec_before + ", " + \
+        exec_after + ", " + str(call_args))
+
+       
+# handle system calls made to Lind, and pass them through
+def LindSyscall(call_num, args):
+  component_num = 1
+  response = None
+
+  # keep trace of system calls
+  if TRACE:
+    strace_msg = ["[lind_server][trace]", str(call_num) + ':' + str(str(current_component()[SYSCALL][call_num]).split(" ")[1]), str(args)[:128], " = "]
+  mycontext[LOCK].acquire(True)
+  mycontext[COMPONENT_NUM] = component_num
+  
+  # pass system calls
+  try:
+    response = dispatch_syscall(call_num, args)
+  except BaseException, e:
+    response = ErrorResponseBuilder("LindSyscall", "ENOSYS", str(e))
+  except:
+    response = ErrorResponseBuilder("LindSyscall", "ENOSYS", "Internal Syscall Error")
+  finally:
+    if TRACE and call_num not in [3]:
+      strace_msg.append(str(response)[:128])
+      log(''.join(strace_msg) + '\n')
+  mycontext[LOCK].release()
+  if response == None:
+    raise Exception()
+  return response
+
+
+# map the given lind fd to host fd and return it
+def GetHostFdFromLindFd(lind_fd):
+  assert isinstance(lind_fd, int
+  # return error: negtive fd, -1 indicates error
+  if lind_fd < 0:
+    return -1
+  if not lind_fd in filedescriptortable.keys():
+    log("GetHostFdFromLindFd: fd " + str(lind_fd) + " not found\n")
+    return -1
+  inode = filedescriptortable[lind_fd]["inode"]
+  if not inode in fileobjecttable.keys():
+    log("GetHostFdFromLindFd: inode " + str(inode) + " not found\n")
+  fobj = fileobjecttable[inode].fobj
+  return fobj.fileno()
+
+
+# main Nacl server to receive and handle system calls
+def NaclRPCServer(nacl_instance, component_num):
+  # uncomment timer to trace execution time of system calls
+  # timer =  mycontext["wallclocktime"]
+  # times = []
+  format = "<i<I<I<I<i<i"
+  header_size = struct_calcsize(format)
+  max_recv = 16384
+  # the expceted message sequence number ??? 
+  FIRST_SEQ_NUM = -10
+  expected_seq_num = FIRST_SEQ_NUM
+  booting = True
+  while True:
+    # initialize time of system calls
+    start = 0
+    stop = 0
+    response = "Failed with Exception."
+
+    # step 1: pull out the header
+    try:
+      # pre = timer()
+      message = nacl_instance.recv(max_recv)
+      # start = timer()
+    except exceptions.Exception:
+      log("[ERROR][RPC] " + "Exception on receive\n")
+      break
+
+    # log("[info][RPC] " + "Raw Message: " + message + "\n")
+    # assert(len(message) == header_size), "wrong header size"
+    if message == "EOT":
+      break
+
+    header = message[0:header_size]
+
+    # now parse the header
+    magic = 0
+    call = 0
+    frmt_len = 0
+    valid = 0
+    payload_size = 0
+    seq_num = 0
+
+    try:
+      [magic, call, frmt_len, payload_size, seq_num, valid] = struct_unpack(format, header)
+    except Exception, err:
+      log("[ERROR][RPC] Error unmarshaling header" + str(type(err)) + ":" + str(err) + "\n")
+      continue
+    # validate the header
+    if magic != -2:
+      raise Exception("Protocol Error: Magic number not found." + \
+                      " Was expecting -2, got " + str(magic))
+    # We probably dont need this in the future, but for now:
+    checksum = magic + call + frmt_len
+
+    # what happens is that libc overwrites the counter pretty early on
+    # for that first, but once that has happened, keep a constat counter.
+    if booting:
+      if (seq_num != expected_seq_num):
+        expected_seq_num = FIRST_SEQ_NUM
+        booting = False
+        log("Booted" + "\n")
+    elif (seq_num != expected_seq_num):
+      pass
+      # log("Out of order seq_num " + seq_num + " != " +  expected_seq_num + \
+      #     " for call " + call)
+
+    expected_seq_num += 1
+    if valid != checksum:
+      raise Exception("ProtocolError: Validation number not found. We got " + \
+                      str(valid) + ", expected " + str(checksum))
+
+    # parse given format string. for empty string, no argment is given 
+    if frmt_len == 0:
+      args = []
+    else:
+      data_start = header_size + frmt_len + 1  # one extra for null char at end of frmt string
+      # the part of the string which is the format string
+      message_format = message[header_size:data_start-1]
+      # log("message format: " + message_format)
+      try:
+        trimmed_string = message[data_start:]
+        assert len(trimmed_string) == payload_size, "Reported (%d) payload does not match actual payload (%d)" % (len(trimmed_string), payload_size)
+        # log("Args: " + trimmed_string)
+        args = struct_unpack(message_format, trimmed_string)
+        # log("Parsed Args" + args)
+      except ValueError as e:
+        log("Unpacking Error: " + str(e) + "\n")
+        log("Message was: " + message_format + "\n")
+        log("Args len=" + str(len(trimmed_string)) + "\n")
+        log("Args String=" + trimmed_string + "\n")
+        log("Syscall was=" + str(call) + "\n")
+        call = NOOP_CALL_NUM # continue on with eno_sys
+
+    # keep trace of system calls
+    if TRACE:
+      strace_msg = ["[lind_server][trace]", str(str(current_component()[SYSCALL][call]).split(" ")[1]), str(args)[:128], " = "]
+
+    # before_call = timer()
+    mycontext[LOCK].acquire(True)
+    mycontext[COMPONENT_NUM] = component_num
+    try:
+      response = dispatch_syscall(call, args)
+    finally:
+      if TRACE:
+        strace_msg.append(str(response)[:128])
+        log(''.join(strace_msg))
+    mycontext[LOCK].release()
+    if response == None:
+      raise Exception()
+
+    retcode_buffer = response.make_struct()
+
+    try:
+      # post = timer()
+      got = nacl_instance.send(retcode_buffer, "")
+      # stop = timer()
+    except:
+      log("[info][RPC] " + "Exception on Send. Stopping\n")
+      break
+    if got == 0:
+      log("[ERROR][RPC] " + "failed to send\n")
+      exitall()
+    # log("Lind Server " + mycontext[component_num][PROGRAM] + " Shutting Down.")
+    # print_times(times)
+
+
+# help start a new component
+def launch_helper(instance, num):
+  # save the instance and start the server in a thread.
+  def closure():
+    NaclRPCServer(instance, num)
+  createthread(closure())
+
+
+# validate the given file name
+def check_file(name):
+  if name.startswith("/"):
+    raise FileNotFoundError("Cannot open files from full path")
+
+  if name.startswith("./"):
+    cleanname = name[2:]
+  else:
+    cleanname = name
+  try:
+    f = openfile(cleanname, False)
+    f.readat(0,100)
+    f.close()
+  except FileNotFoundError:
+    log("File not found:" + name)
+    exitall()
+
+
+# create a new component and run it as a test
+def new_component():
+  new_component_num = mycontext[COMPONENT_NUM] + 1
+
+  # creat a new component
+  mycontext[new_component_num] = {}
+  code_loc = "liblind/com2.nexe"
+  mycontext[new_component_num][PROGRAM] = code_loc
+  mycontext[new_component_num][CMD_LINE] = []
+  setup_dispatcher(new_component_num)
+  setup_filetable(new_component_num)
+  setup_component_communication(new_component_num)
+  nacl = safelyexecutenativecode(code_loc, [])
+
+  # start new component
+  if nacl != None:
+    launch_helper(nacl, new_component_num)
+  else:
+    log("Safe Binary mode must be switched on for this program to work. \n")
+
+
+def setup_filetable(component_num):
+  # Try to open file system. If you can't, then make a new one.
+  log("Opening file system...\n")
+  load_fs()
+  # load_fs() will check first if the metadata is present, if not
+  # present it will create it. I am removing the following call
+  # because it duplicates the creation of special files.
+  # load_fs_special_files()
+  log("done.\n")
+
+
+def setup_component_communication(component_num):
+    # creat new communication. 
+    # message box is empty at the beginning
+    specific_component(component_num)[MBOX] = []
+
+
+def lind_factory():
+  creat_component_num = 1 
+  setup_errnos(creat_component_num)
+  setup_dispatcher(creat_component_num)
+  setup_filetable(creat_component_num)
+  setup_component_communication(creat_component_num)
+  mycontext[LOCK] = createlock()
+  # check_file(current_component()[PROGRAM])
+  # if we are running a component, launch another one as a test.
+  if "com1" in current_component()[PROGRAM]:
+    log("starting multi-component test mode")
+    mycontext[COMPONENT_MODE] = True
+    new_component()
+  else:
+    mycontext[COMPONENT_MODE] = False
+
+
+def parse_commandline():
+  # create the first component as current component 
+  mycontext[COMPONENT_NUM] = 1
+  current_component() = {}
+  
+  # parse commandline and pull out arguments based on different mode. ("fast" mode or not)
+  if callargs[0] == "--fast":
+    current_component()[PROGRAM] = callargs[1]
+    current_component()[CMD_LINE] = callargs[2:]
+    current_component()[CMD_LINE].append("--fast")
+  else:
+    current_component()[PROGRAM] = callargs[0]
+    current_component()[CMD_LINE] = callargs[1:]
+
+
+def finalize():
+  log("Persisting metadata: ...\n")
+  persist_metadata(DEFAULT_METADATA_FILENAME)
+  log("Done persisting metadata.\n")
+
+
+def map_native_to_lind(native, lind):
+  FILE_MAP[lind] = native
+  log("map_native_to_lind, native = " + native + " lind = " + lind + "\n")
+
+
+def get_lind_map_to_native(lind):
+  # When given a negative fd, this is indicative of an error.
+  if lind < 0:
+    return -1	    
+  	  
+  log("get_lind_map_to_native, lind = " + lind + "native = " + \
+       FILE_MAP[lind] + "\n")
+  	
+  return FILE_MAP[lind]
+
+
+def main():
+  # pull out code location
+  code_loc = current_component()[PROGRAM]
+  # execute code with arguments given
+  nacl = safelyexecutenativecode(code_loc, current_component()[CMD_LINE])
+
+  if nacl != None:
+    NaclRPCServer(nacl, 1)
+  else:
+    log("Error: Safe Binary mode must be switched on for this program to work.\n")
+
+
+if callfunc == "initialize":
+  log("Lind v0." + VERSION[6:-2] + "Last commit:" + "$Date$"[7:-2]+"\n")
+  parse_commandline()
+  lind_factory()
+

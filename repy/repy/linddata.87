@@ -1,0 +1,5 @@
+This will be output to testfile.txt
+This will be output to testfile.txt
+This will be output to testfile.txt
+fd = 6 
+[Test] Write to testfile. Redirected from the stdout. 

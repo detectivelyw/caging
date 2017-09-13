@@ -1,0 +1,28 @@
+
+def lind_net_sendto(args):
+  """
+  """
+  
+  sockfd = args[0]
+  buf = args[1]
+  flags = args[2]
+  addr = args[3]
+  
+  family, port, ip, pad = parse_sockaddr_struct(addr)
+  ipaddr = inet_ntoa(struct_pack("<I", ip))
+
+  try:
+    result = sendto_syscall(sockfd, buf, ipaddr, port, flags)
+  except SyscallError,e:
+    return ErrorResponseBuilder("net_sendto", e[1], e[2])
+  
+  return SuccessResponseBuilder("net_sendto", result)
+
+
+def lind_safe_net_sendto(args):
+  """
+  """
+  result = lind_net_sendto(args)
+
+  return result
+

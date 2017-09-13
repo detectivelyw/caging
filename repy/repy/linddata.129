@@ -1,0 +1,2 @@
+#!/home/liyiwen/Documents/Projects/cages/caging/experiments/bash/bin_bash/bash
+echo "<script 02> Hello World!" | grep "Hello"

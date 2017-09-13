@@ -1,0 +1,2 @@
+[Test] Write to testfile. Redirected from the stdout. 
+[Test] Write to testfile. Redirected from the stdout. 

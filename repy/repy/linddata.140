@@ -1,0 +1,2 @@
+#!/test_case/bash/bash.nexe
+cat ./test_files/testfile_01.txt | grep "End"
