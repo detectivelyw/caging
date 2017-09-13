@@ -1,0 +1,2 @@
+CC=/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/x86_64-nacl-gcc ./configure --prefix=/home/liyiwen/Documents/Projects/cages/caging/experiments/gawk/gawk-4.0.0 --host=x86_64 
+

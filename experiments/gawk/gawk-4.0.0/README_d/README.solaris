@@ -1,0 +1,7 @@
+Tue Apr 20 11:33:20 IDT 2010
+============================
+The lc_num1 test fails on Solaris 10 systems. This is a bug with Solaris,
+not gawk.
+
+Arnold Robbins
+arnold@skeeve.com
