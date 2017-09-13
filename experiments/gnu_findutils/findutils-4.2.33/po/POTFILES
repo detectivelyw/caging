@@ -1,0 +1,23 @@
+     ../gnulib/lib/argmatch.c \
+     ../gnulib/lib/closeout.c \
+     ../gnulib/lib/error.c \
+     ../gnulib/lib/getopt.c \
+     ../gnulib/lib/human.c \
+     ../gnulib/lib/quotearg.c \
+     ../gnulib/lib/regex.c \
+     ../gnulib/lib/rpmatch.c \
+     ../gnulib/lib/strftime.c \
+     ../gnulib/lib/xalloc-die.c \
+     ../gnulib/lib/xstrtol-error.c \
+     ../find/find.c \
+     ../find/fstype.c \
+     ../find/parser.c \
+     ../find/pred.c \
+     ../find/tree.c \
+     ../find/util.c \
+     ../lib/buildcmd.c \
+     ../lib/regextype.c \
+     ../locate/code.c \
+     ../locate/frcode.c \
+     ../locate/locate.c \
+     ../xargs/xargs.c
