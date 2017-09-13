@@ -1,0 +1,63 @@
+getopt1.o: getopt1.c ../config.h getopt.h getopt.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/getopt.h \
+ ctype.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/ctype.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/features.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/cdefs.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/wordsize.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs-64.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/types.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/typesizes.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/endian.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/endian.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/byteswap.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/xlocale.h \
+ getopt-cdefs.h getopt-pfx-core.h getopt-core.h getopt-pfx-ext.h \
+ getopt-ext.h getopt_int.h
+
+../config.h:
+
+getopt.h:
+
+getopt.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/getopt.h:
+
+ctype.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/ctype.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/features.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/cdefs.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/wordsize.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs-64.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/types.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/typesizes.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/endian.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/endian.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/byteswap.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/xlocale.h:
+
+getopt-cdefs.h:
+
+getopt-pfx-core.h:
+
+getopt-core.h:
+
+getopt-pfx-ext.h:
+
+getopt-ext.h:
+
+getopt_int.h:

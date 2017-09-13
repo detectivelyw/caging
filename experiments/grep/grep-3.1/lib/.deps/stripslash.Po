@@ -1,0 +1,17 @@
+stripslash.o: stripslash.c ../config.h dirname.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdbool.h \
+ stddef.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stddef.h \
+ dosname.h
+
+../config.h:
+
+dirname.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdbool.h:
+
+stddef.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stddef.h:
+
+dosname.h:

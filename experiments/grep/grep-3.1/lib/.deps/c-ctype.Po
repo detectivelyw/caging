@@ -1,0 +1,8 @@
+c-ctype.o: c-ctype.c ../config.h c-ctype.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdbool.h
+
+../config.h:
+
+c-ctype.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdbool.h:

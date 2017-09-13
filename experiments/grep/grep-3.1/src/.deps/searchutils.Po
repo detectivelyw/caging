@@ -1,0 +1,318 @@
+searchutils.o: searchutils.c ../config.h search.h ../lib/sys/types.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/types.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/features.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/cdefs.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/wordsize.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs-64.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/types.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/typesizes.h \
+ ../lib/time.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/time.h \
+ ../lib/stddef.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stddef.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/endian.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/endian.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/byteswap.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/select.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/select.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/sigset.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/time.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/sysmacros.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/pthreadtypes.h \
+ ../lib/stdint.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/stdint.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/wchar.h \
+ ../lib/limits.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include-fixed/limits.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include-fixed/syslimits.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/limits.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/posix1_lim.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/local_lim.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/linux/limits.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/posix2_lim.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/xopen_lim.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/stdio_lim.h \
+ ../lib/inttypes.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/inttypes.h \
+ ../lib/wchar.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/wchar.h \
+ ../lib/stdio.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/stdio.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdarg.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/xlocale.h \
+ ../lib/wctype.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/libio.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/_G_config.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/sys_errlist.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/stdio.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/wctype.h \
+ ../lib/regex.h system.h ../lib/fcntl.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/fcntl.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/fcntl.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/uio.h \
+ ../lib/sys/stat.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/stat.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/stat.h \
+ ../lib/unistd.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/unistd.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/posix_opt.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/environments.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/confname.h \
+ ../lib/getopt.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/getopt.h \
+ ../lib/getopt-cdefs.h ../lib/getopt-pfx-core.h ../lib/getopt-core.h \
+ ../lib/getopt-pfx-ext.h ../lib/getopt-ext.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/errno.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/errno.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/linux/errno.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm/errno.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm-generic/errno.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm-generic/errno-base.h \
+ ../lib/configmake.h ../lib/dirname.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdbool.h \
+ ../lib/dosname.h ../lib/ignore-value.h ../lib/minmax.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/param.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/linux/param.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm/param.h \
+ ../lib/same-inode.h ../lib/stdlib.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/stdlib.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/waitflags.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/waitstatus.h \
+ ../lib/alloca.h ../lib/string.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/string.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/string.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/string2.h \
+ ../lib/ctype.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/ctype.h \
+ ../lib/gettext.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/libintl.h \
+ ../lib/locale.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/locale.h \
+ /usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/locale.h \
+ ../lib/unlocked-io.h grep.h ../lib/dfa.h kwset.h ../lib/arg-nonnull.h \
+ ../lib/xalloc.h ../lib/xalloc-oversized.h ../lib/localeinfo.h
+
+../config.h:
+
+search.h:
+
+../lib/sys/types.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/types.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/features.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/cdefs.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/wordsize.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/gnu/stubs-64.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/types.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/typesizes.h:
+
+../lib/time.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/time.h:
+
+../lib/stddef.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stddef.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/endian.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/endian.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/byteswap.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/select.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/select.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/sigset.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/time.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/sysmacros.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/pthreadtypes.h:
+
+../lib/stdint.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/stdint.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/wchar.h:
+
+../lib/limits.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include-fixed/limits.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include-fixed/syslimits.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/limits.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/posix1_lim.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/local_lim.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/linux/limits.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/posix2_lim.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/xopen_lim.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/stdio_lim.h:
+
+../lib/inttypes.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/inttypes.h:
+
+../lib/wchar.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/wchar.h:
+
+../lib/stdio.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/stdio.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdarg.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/xlocale.h:
+
+../lib/wctype.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/libio.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/_G_config.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/sys_errlist.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/stdio.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/wctype.h:
+
+../lib/regex.h:
+
+system.h:
+
+../lib/fcntl.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/fcntl.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/fcntl.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/uio.h:
+
+../lib/sys/stat.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/stat.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/stat.h:
+
+../lib/unistd.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/unistd.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/posix_opt.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/environments.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/confname.h:
+
+../lib/getopt.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/getopt.h:
+
+../lib/getopt-cdefs.h:
+
+../lib/getopt-pfx-core.h:
+
+../lib/getopt-core.h:
+
+../lib/getopt-pfx-ext.h:
+
+../lib/getopt-ext.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/errno.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/errno.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/linux/errno.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm/errno.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm-generic/errno.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm-generic/errno-base.h:
+
+../lib/configmake.h:
+
+../lib/dirname.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/include/stdbool.h:
+
+../lib/dosname.h:
+
+../lib/ignore-value.h:
+
+../lib/minmax.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/sys/param.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/linux/param.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/asm/param.h:
+
+../lib/same-inode.h:
+
+../lib/stdlib.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/stdlib.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/waitflags.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/waitstatus.h:
+
+../lib/alloca.h:
+
+../lib/string.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/string.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/string.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/string2.h:
+
+../lib/ctype.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/ctype.h:
+
+../lib/gettext.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/libintl.h:
+
+../lib/locale.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/locale.h:
+
+/usr/lind_project/repy/sdk/toolchain/linux_x86_glibc/bin/../lib/gcc/x86_64-nacl/4.4.3/../../../../x86_64-nacl/include/bits/locale.h:
+
+../lib/unlocked-io.h:
+
+grep.h:
+
+../lib/dfa.h:
+
+kwset.h:
+
+../lib/arg-nonnull.h:
+
+../lib/xalloc.h:
+
+../lib/xalloc-oversized.h:
+
+../lib/localeinfo.h:
