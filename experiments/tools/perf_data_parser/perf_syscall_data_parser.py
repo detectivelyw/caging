@@ -91,9 +91,17 @@ def main(argv):
      print "File: ", inputfile, " does not exist!"
      sys.exit(2)
 
+   syscall_total_time = 0.0
+   syscall_total_invoked_times = 0
    for syscall in syscall_invoked_times_dict:
       print syscall + ": " + str(syscall_invoked_times_dict[syscall]) + " " + str(syscall_timing_dict[syscall])
+      syscall_total_time = syscall_total_time + syscall_timing_dict[syscall]
+      syscall_total_invoked_times = syscall_total_invoked_times + syscall_invoked_times_dict[syscall]
       outfile.write(syscall + ": " + str(syscall_invoked_times_dict[syscall]) + " " + str(syscall_timing_dict[syscall]) + "\n")
+   print "syscall_total_time = " + str(syscall_total_time)
+   outfile.write("syscall_total_time = " + str(syscall_total_time) + "\n")
+   print "syscall_total_invoked_times = " + str(syscall_total_invoked_times)
+   outfile.write("syscall_total_invoked_time = " + str(syscall_total_invoked_times) + "\n")
    outfile.close()
 
 
