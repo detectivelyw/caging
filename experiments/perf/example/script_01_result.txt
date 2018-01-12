@@ -1,0 +1,289 @@
+            bash 16262 [003] 7317703.348183: syscalls:sys_enter_brk: brk: 0x00000000
+            bash 16262 [003] 7317703.348185: syscalls:sys_exit_brk: 0x863000
+            bash 16262 [003] 7317703.348208: syscalls:sys_enter_access: filename: 0x7ff2326f98c3, mode: 0x00000000
+            bash 16262 [003] 7317703.348214: syscalls:sys_exit_access: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.348218: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00002000, prot: 0x00000003, flags: 0x00000022, fd: 0xffffffff, off: 0x00000000
+            bash 16262 [003] 7317703.348285: syscalls:sys_exit_mmap: 0x7ff2328fd000
+            bash 16262 [003] 7317703.348296: syscalls:sys_enter_access: filename: 0x7ff2326fc3d0, mode: 0x00000004
+            bash 16262 [003] 7317703.348300: syscalls:sys_exit_access: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.348311: syscalls:sys_enter_open: filename: 0x7ff2326f9df9, flags: 0x00080000, mode: 0x00000001
+            bash 16262 [003] 7317703.348317: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.348319: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ffd268ec930
+            bash 16262 [003] 7317703.348321: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.348323: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00022efb, prot: 0x00000001, flags: 0x00000002, fd: 0x00000004, off: 0x00000000
+            bash 16262 [003] 7317703.348390: syscalls:sys_exit_mmap: 0x7ff2328da000
+            bash 16262 [003] 7317703.348391: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.348393: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.348397: syscalls:sys_enter_access: filename: 0x7ff2326f98c3, mode: 0x00000000
+            bash 16262 [003] 7317703.348400: syscalls:sys_exit_access: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.348414: syscalls:sys_enter_open: filename: 0x7ff2328ea256, flags: 0x00080000, mode: 0x7ff2329011c8
+            bash 16262 [003] 7317703.348420: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.348421: syscalls:sys_enter_read: fd: 0x00000004, buf: 0x7ffd268ecad0, count: 0x00000340
+            bash 16262 [003] 7317703.348424: syscalls:sys_exit_read: 0x340
+            bash 16262 [003] 7317703.348431: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ffd268ec980
+            bash 16262 [003] 7317703.348432: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.348435: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00228ce0, prot: 0x00000005, flags: 0x00000802, fd: 0x00000004, off: 0x00000000
+            bash 16262 [003] 7317703.348503: syscalls:sys_exit_mmap: 0x7ff2324b4000
+            bash 16262 [003] 7317703.348504: syscalls:sys_enter_mprotect: start: 0x7ff2324d9000, len: 0x001ff000, prot: 0x00000000
+            bash 16262 [003] 7317703.348574: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.348577: syscalls:sys_enter_mmap: addr: 0x7ff2326d8000, len: 0x00005000, prot: 0x00000003, flags: 0x00000812, fd: 0x00000004, off: 0x00024000
+            bash 16262 [003] 7317703.348648: syscalls:sys_exit_mmap: 0x7ff2326d8000
+            bash 16262 [003] 7317703.348659: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.348660: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.348667: syscalls:sys_enter_access: filename: 0x7ff2326f98c3, mode: 0x00000000
+            bash 16262 [003] 7317703.348670: syscalls:sys_exit_access: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.348679: syscalls:sys_enter_open: filename: 0x7ff2328f66af, flags: 0x00080000, mode: 0x7ff2329011c8
+            bash 16262 [003] 7317703.348684: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.348685: syscalls:sys_enter_read: fd: 0x00000004, buf: 0x7ffd268ecaa0, count: 0x00000340
+            bash 16262 [003] 7317703.348687: syscalls:sys_exit_read: 0x340
+            bash 16262 [003] 7317703.348689: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ffd268ec950
+            bash 16262 [003] 7317703.348691: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.348693: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00203130, prot: 0x00000005, flags: 0x00000802, fd: 0x00000004, off: 0x00000000
+            bash 16262 [003] 7317703.348761: syscalls:sys_exit_mmap: 0x7ff2322b0000
+            bash 16262 [003] 7317703.348762: syscalls:sys_enter_mprotect: start: 0x7ff2322b3000, len: 0x001ff000, prot: 0x00000000
+            bash 16262 [003] 7317703.348832: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.348833: syscalls:sys_enter_mmap: addr: 0x7ff2324b2000, len: 0x00002000, prot: 0x00000003, flags: 0x00000812, fd: 0x00000004, off: 0x00002000
+            bash 16262 [003] 7317703.348902: syscalls:sys_exit_mmap: 0x7ff2324b2000
+            bash 16262 [003] 7317703.348913: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.348914: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.348919: syscalls:sys_enter_access: filename: 0x7ff2326f98c3, mode: 0x00000000
+            bash 16262 [003] 7317703.348921: syscalls:sys_exit_access: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.348929: syscalls:sys_enter_open: filename: 0x7ff2328f956a, flags: 0x00080000, mode: 0x7ff2329011c8
+            bash 16262 [003] 7317703.348934: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.348936: syscalls:sys_enter_read: fd: 0x00000004, buf: 0x7ffd268eca70, count: 0x00000340
+            bash 16262 [003] 7317703.348937: syscalls:sys_exit_read: 0x340
+            bash 16262 [003] 7317703.348939: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ffd268ec920
+            bash 16262 [003] 7317703.348941: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.348942: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00001000, prot: 0x00000003, flags: 0x00000022, fd: 0xffffffff, off: 0x00000000
+            bash 16262 [003] 7317703.349009: syscalls:sys_exit_mmap: 0x7ff2328d9000
+            bash 16262 [003] 7317703.349016: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x003c42c0, prot: 0x00000005, flags: 0x00000802, fd: 0x00000004, off: 0x00000000
+            bash 16262 [003] 7317703.349084: syscalls:sys_exit_mmap: 0x7ff231eeb000
+            bash 16262 [003] 7317703.349085: syscalls:sys_enter_mprotect: start: 0x7ff2320a5000, len: 0x00200000, prot: 0x00000000
+            bash 16262 [003] 7317703.349157: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.349158: syscalls:sys_enter_mmap: addr: 0x7ff2322a5000, len: 0x00006000, prot: 0x00000003, flags: 0x00000812, fd: 0x00000004, off: 0x001ba000
+            bash 16262 [003] 7317703.349228: syscalls:sys_exit_mmap: 0x7ff2322a5000
+            bash 16262 [003] 7317703.349234: syscalls:sys_enter_mmap: addr: 0x7ff2322ab000, len: 0x000042c0, prot: 0x00000003, flags: 0x00000032, fd: 0xffffffff, off: 0x00000000
+            bash 16262 [003] 7317703.349301: syscalls:sys_exit_mmap: 0x7ff2322ab000
+            bash 16262 [003] 7317703.349308: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.349309: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.349333: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00002000, prot: 0x00000003, flags: 0x00000022, fd: 0xffffffff, off: 0x00000000
+            bash 16262 [003] 7317703.349400: syscalls:sys_exit_mmap: 0x7ff2328d7000
+            bash 16262 [003] 7317703.349528: syscalls:sys_enter_mprotect: start: 0x7ff2322a5000, len: 0x00004000, prot: 0x00000001
+            bash 16262 [003] 7317703.349598: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.349608: syscalls:sys_enter_mprotect: start: 0x7ff2324b2000, len: 0x00001000, prot: 0x00000001
+            bash 16262 [003] 7317703.349676: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.349716: syscalls:sys_enter_mprotect: start: 0x7ff2326d8000, len: 0x00004000, prot: 0x00000001
+            bash 16262 [003] 7317703.349784: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.349799: syscalls:sys_enter_mprotect: start: 0x006ef000, len: 0x00001000, prot: 0x00000001
+            bash 16262 [003] 7317703.349866: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.349875: syscalls:sys_enter_mprotect: start: 0x7ff2328ff000, len: 0x00001000, prot: 0x00000001
+            bash 16262 [003] 7317703.349942: syscalls:sys_exit_mprotect: 0x0
+            bash 16262 [003] 7317703.349943: syscalls:sys_enter_munmap: addr: 0x7ff2328da000, len: 0x00022efb
+            bash 16262 [003] 7317703.349953: syscalls:sys_exit_munmap: 0x0
+            bash 16262 [003] 7317703.349998: syscalls:sys_enter_open: filename: 0x004b7b04, flags: 0x00000802, mode: 0xdd03e4ed6d76d465
+            bash 16262 [003] 7317703.350010: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.350013: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.350014: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.350051: syscalls:sys_enter_brk: brk: 0x00000000
+            bash 16262 [003] 7317703.350052: syscalls:sys_exit_brk: 0x863000
+            bash 16262 [003] 7317703.350056: syscalls:sys_enter_brk: brk: 0x00864000
+            bash 16262 [003] 7317703.350123: syscalls:sys_exit_brk: 0x864000
+            bash 16262 [003] 7317703.350135: syscalls:sys_enter_open: filename: 0x7ff23206fd70, flags: 0x00080000, mode: 0x00000005
+            bash 16262 [003] 7317703.350142: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.350143: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ff2322aab60
+            bash 16262 [003] 7317703.350145: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.350147: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x006e1e30, prot: 0x00000001, flags: 0x00000002, fd: 0x00000004, off: 0x00000000
+            bash 16262 [003] 7317703.350216: syscalls:sys_exit_mmap: 0x7ff231809000
+            bash 16262 [003] 7317703.350220: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.350221: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.350230: syscalls:sys_enter_brk: brk: 0x00865000
+            bash 16262 [003] 7317703.350296: syscalls:sys_exit_brk: 0x865000
+            bash 16262 [003] 7317703.350305: syscalls:sys_enter_brk: brk: 0x00866000
+            bash 16262 [003] 7317703.350370: syscalls:sys_exit_brk: 0x866000
+            bash 16262 [003] 7317703.350415: syscalls:sys_enter_getuid: 
+            bash 16262 [003] 7317703.350417: syscalls:sys_exit_getuid: 0x0
+            bash 16262 [003] 7317703.350419: syscalls:sys_enter_getgid: 
+            bash 16262 [003] 7317703.350420: syscalls:sys_exit_getgid: 0x0
+            bash 16262 [003] 7317703.350422: syscalls:sys_enter_geteuid: 
+            bash 16262 [003] 7317703.350423: syscalls:sys_exit_geteuid: 0x0
+            bash 16262 [003] 7317703.350643: syscalls:sys_enter_getegid: 
+            bash 16262 [003] 7317703.350645: syscalls:sys_exit_getegid: 0x0
+            bash 16262 [003] 7317703.350656: syscalls:sys_enter_rt_sigprocmask: how: 0x00000000, nset: 0x00000000, oset: 0x006fd868, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.350657: syscalls:sys_exit_rt_sigprocmask: 0x0
+            bash 16262 [003] 7317703.350673: syscalls:sys_enter_brk: brk: 0x00867000
+            bash 16262 [003] 7317703.350738: syscalls:sys_exit_brk: 0x867000
+            bash 16262 [003] 7317703.350762: syscalls:sys_enter_open: filename: 0x7ff232069698, flags: 0x00080000, mode: 0x000001b6
+            bash 16262 [003] 7317703.350775: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.350782: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ffd268ead00
+            bash 16262 [003] 7317703.350784: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.350785: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00001000, prot: 0x00000003, flags: 0x00000022, fd: 0xffffffff, off: 0x00000000
+            bash 16262 [003] 7317703.350852: syscalls:sys_exit_mmap: 0x7ff2328fc000
+            bash 16262 [003] 7317703.350854: syscalls:sys_enter_read: fd: 0x00000004, buf: 0x7ff2328fc000, count: 0x00000400
+            bash 16262 [003] 7317703.351145: syscalls:sys_exit_read: 0x400
+            bash 16262 [003] 7317703.351165: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.351167: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.351173: syscalls:sys_enter_munmap: addr: 0x7ff2328fc000, len: 0x00001000
+            bash 16262 [003] 7317703.351182: syscalls:sys_exit_munmap: 0x0
+            bash 16262 [003] 7317703.351185: syscalls:sys_enter_brk: brk: 0x00868000
+            bash 16262 [003] 7317703.351254: syscalls:sys_exit_brk: 0x868000
+            bash 16262 [003] 7317703.351309: syscalls:sys_enter_rt_sigaction: sig: 0x00000011, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351311: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351313: syscalls:sys_enter_rt_sigaction: sig: 0x00000011, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351313: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351315: syscalls:sys_enter_rt_sigaction: sig: 0x00000002, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351316: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351317: syscalls:sys_enter_rt_sigaction: sig: 0x00000002, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351317: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351319: syscalls:sys_enter_rt_sigaction: sig: 0x00000003, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351319: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351321: syscalls:sys_enter_rt_sigaction: sig: 0x00000003, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351321: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351323: syscalls:sys_enter_rt_sigprocmask: how: 0x00000000, nset: 0x00000000, oset: 0x006fe2e0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351324: syscalls:sys_exit_rt_sigprocmask: 0x0
+            bash 16262 [003] 7317703.351326: syscalls:sys_enter_rt_sigaction: sig: 0x00000003, act: 0x7ffd268ecd00, oact: 0x7ffd268ecda0, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.351327: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.351333: syscalls:sys_enter_newuname: name: 0x7ffd268ecdf0
+            bash 16262 [003] 7317703.351334: syscalls:sys_exit_newuname: 0x0
+            bash 16262 [003] 7317703.351360: syscalls:sys_enter_brk: brk: 0x00869000
+            bash 16262 [003] 7317703.351426: syscalls:sys_exit_brk: 0x869000
+            bash 16262 [003] 7317703.351435: syscalls:sys_enter_brk: brk: 0x0086a000
+            bash 16262 [003] 7317703.351501: syscalls:sys_exit_brk: 0x86a000
+            bash 16262 [003] 7317703.351520: syscalls:sys_enter_newstat: filename: 0x00865e08, statbuf: 0x7ffd268ecdb0
+            bash 16262 [003] 7317703.351531: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351532: syscalls:sys_enter_newstat: filename: 0x004b8b4f, statbuf: 0x7ffd268ece40
+            bash 16262 [003] 7317703.351534: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351538: syscalls:sys_enter_getpid: 
+            bash 16262 [003] 7317703.351540: syscalls:sys_exit_getpid: 0x3f86
+            bash 16262 [003] 7317703.351558: syscalls:sys_enter_open: filename: 0x7ff23206aef0, flags: 0x00000000, mode: 0x00000000
+            bash 16262 [003] 7317703.351565: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.351567: syscalls:sys_enter_newfstat: fd: 0x00000004, statbuf: 0x7ffd268ecc00
+            bash 16262 [003] 7317703.351568: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.351569: syscalls:sys_enter_mmap: addr: 0x00000000, len: 0x00006692, prot: 0x00000001, flags: 0x00000001, fd: 0x00000004, off: 0x00000000
+            bash 16262 [003] 7317703.351639: syscalls:sys_exit_mmap: 0x7ff2328f6000
+            bash 16262 [003] 7317703.351640: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.351641: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.351654: syscalls:sys_enter_brk: brk: 0x0086b000
+            bash 16262 [003] 7317703.351719: syscalls:sys_exit_brk: 0x86b000
+            bash 16262 [003] 7317703.351740: syscalls:sys_enter_getppid: 
+            bash 16262 [003] 7317703.351741: syscalls:sys_exit_getppid: 0x3f83
+            bash 16262 [003] 7317703.351754: syscalls:sys_enter_newstat: filename: 0x004b8b4f, statbuf: 0x7ffd268ece50
+            bash 16262 [003] 7317703.351757: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351764: syscalls:sys_enter_newstat: filename: 0x0086a2c8, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351766: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351768: syscalls:sys_enter_newstat: filename: 0x0086a2c8, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351770: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351773: syscalls:sys_enter_newstat: filename: 0x0086a288, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351775: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351777: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351778: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351780: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351782: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351783: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351785: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351786: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351788: syscalls:sys_exit_newstat: 0xfffffffffffffffe
+            bash 16262 [003] 7317703.351789: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecd60
+            bash 16262 [003] 7317703.351791: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351794: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecc90
+            bash 16262 [003] 7317703.351796: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351797: syscalls:sys_enter_geteuid: 
+            bash 16262 [003] 7317703.351798: syscalls:sys_exit_geteuid: 0x0
+            bash 16262 [003] 7317703.351799: syscalls:sys_enter_getegid: 
+            bash 16262 [003] 7317703.351800: syscalls:sys_exit_getegid: 0x0
+            bash 16262 [003] 7317703.351801: syscalls:sys_enter_getuid: 
+            bash 16262 [003] 7317703.351802: syscalls:sys_exit_getuid: 0x0
+            bash 16262 [003] 7317703.351803: syscalls:sys_enter_getgid: 
+            bash 16262 [003] 7317703.351804: syscalls:sys_exit_getgid: 0x0
+            bash 16262 [003] 7317703.351805: syscalls:sys_enter_access: filename: 0x00863e08, mode: 0x00000001
+            bash 16262 [003] 7317703.351808: syscalls:sys_exit_access: 0x0
+            bash 16262 [003] 7317703.351809: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecc90
+            bash 16262 [003] 7317703.351811: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351812: syscalls:sys_enter_geteuid: 
+            bash 16262 [003] 7317703.351813: syscalls:sys_exit_geteuid: 0x0
+            bash 16262 [003] 7317703.351814: syscalls:sys_enter_getegid: 
+            bash 16262 [003] 7317703.351814: syscalls:sys_exit_getegid: 0x0
+            bash 16262 [003] 7317703.351815: syscalls:sys_enter_getuid: 
+            bash 16262 [003] 7317703.351816: syscalls:sys_exit_getuid: 0x0
+            bash 16262 [003] 7317703.351817: syscalls:sys_enter_getgid: 
+            bash 16262 [003] 7317703.351818: syscalls:sys_exit_getgid: 0x0
+            bash 16262 [003] 7317703.351819: syscalls:sys_enter_access: filename: 0x00863e08, mode: 0x00000004
+            bash 16262 [003] 7317703.351821: syscalls:sys_exit_access: 0x0
+            bash 16262 [003] 7317703.351822: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268ecd90
+            bash 16262 [003] 7317703.351823: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351824: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268eccc0
+            bash 16262 [003] 7317703.351826: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351827: syscalls:sys_enter_geteuid: 
+            bash 16262 [003] 7317703.351827: syscalls:sys_exit_geteuid: 0x0
+            bash 16262 [003] 7317703.351828: syscalls:sys_enter_getegid: 
+            bash 16262 [003] 7317703.351829: syscalls:sys_exit_getegid: 0x0
+            bash 16262 [003] 7317703.351830: syscalls:sys_enter_getuid: 
+            bash 16262 [003] 7317703.351831: syscalls:sys_exit_getuid: 0x0
+            bash 16262 [003] 7317703.351832: syscalls:sys_enter_getgid: 
+            bash 16262 [003] 7317703.351833: syscalls:sys_exit_getgid: 0x0
+            bash 16262 [003] 7317703.351834: syscalls:sys_enter_access: filename: 0x00863e08, mode: 0x00000001
+            bash 16262 [003] 7317703.351835: syscalls:sys_exit_access: 0x0
+            bash 16262 [003] 7317703.351836: syscalls:sys_enter_newstat: filename: 0x00863e08, statbuf: 0x7ffd268eccc0
+            bash 16262 [003] 7317703.351838: syscalls:sys_exit_newstat: 0x0
+            bash 16262 [003] 7317703.351839: syscalls:sys_enter_geteuid: 
+            bash 16262 [003] 7317703.351839: syscalls:sys_exit_geteuid: 0x0
+            bash 16262 [003] 7317703.351840: syscalls:sys_enter_getegid: 
+            bash 16262 [003] 7317703.351841: syscalls:sys_exit_getegid: 0x0
+            bash 16262 [003] 7317703.351842: syscalls:sys_enter_getuid: 
+            bash 16262 [003] 7317703.351843: syscalls:sys_exit_getuid: 0x0
+            bash 16262 [003] 7317703.351844: syscalls:sys_enter_getgid: 
+            bash 16262 [003] 7317703.351845: syscalls:sys_exit_getgid: 0x0
+            bash 16262 [003] 7317703.351846: syscalls:sys_enter_access: filename: 0x00863e08, mode: 0x00000004
+            bash 16262 [003] 7317703.351848: syscalls:sys_exit_access: 0x0
+            bash 16262 [003] 7317703.351884: syscalls:sys_enter_brk: brk: 0x0086c000
+            bash 16262 [003] 7317703.351950: syscalls:sys_exit_brk: 0x86c000
+            bash 16262 [003] 7317703.351958: syscalls:sys_enter_brk: brk: 0x0086d000
+            bash 16262 [003] 7317703.352022: syscalls:sys_exit_brk: 0x86d000
+            bash 16262 [003] 7317703.352032: syscalls:sys_enter_getpgrp: 
+            bash 16262 [003] 7317703.352033: syscalls:sys_exit_getpgrp: 0x3f82
+            bash 16262 [003] 7317703.352037: syscalls:sys_enter_rt_sigaction: sig: 0x00000011, act: 0x7ffd268eccf0, oact: 0x7ffd268ecd90, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.352038: syscalls:sys_exit_rt_sigaction: 0x0
+            bash 16262 [003] 7317703.352048: syscalls:sys_enter_getrlimit: resource: 0x00000006, rlim: 0x7ffd268ecf10
+            bash 16262 [003] 7317703.352050: syscalls:sys_exit_getrlimit: 0x0
+            bash 16262 [003] 7317703.352076: syscalls:sys_enter_brk: brk: 0x0086e000
+            bash 16262 [003] 7317703.352142: syscalls:sys_exit_brk: 0x86e000
+            bash 16262 [003] 7317703.352222: syscalls:sys_enter_rt_sigprocmask: how: 0x00000000, nset: 0x00000000, oset: 0x006fe3a8, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.352223: syscalls:sys_exit_rt_sigprocmask: 0x0
+            bash 16262 [003] 7317703.352226: syscalls:sys_enter_open: filename: 0x00863148, flags: 0x00000000, mode: 0x0031305f
+            bash 16262 [003] 7317703.352232: syscalls:sys_exit_open: 0x4
+            bash 16262 [003] 7317703.352240: syscalls:sys_enter_ioctl: fd: 0x00000004, cmd: 0x00005401, arg: 0x7ffd268ed040
+            bash 16262 [003] 7317703.352242: syscalls:sys_exit_ioctl: 0xffffffffffffffe7
+            bash 16262 [003] 7317703.352244: syscalls:sys_enter_lseek: fd: 0x00000004, offset: 0x00000000, whence: 0x00000001
+            bash 16262 [003] 7317703.352245: syscalls:sys_exit_lseek: 0x0
+            bash 16262 [003] 7317703.352247: syscalls:sys_enter_read: fd: 0x00000004, buf: 0x7ffd268ed190, count: 0x00000050
+            bash 16262 [003] 7317703.352250: syscalls:sys_exit_read: 0x3c
+            bash 16262 [003] 7317703.352252: syscalls:sys_enter_lseek: fd: 0x00000004, offset: 0x00000000, whence: 0x00000000
+            bash 16262 [003] 7317703.352253: syscalls:sys_exit_lseek: 0x0
+            bash 16262 [003] 7317703.352254: syscalls:sys_enter_getrlimit: resource: 0x00000007, rlim: 0x7ffd268ed070
+            bash 16262 [003] 7317703.352255: syscalls:sys_exit_getrlimit: 0x0
+            bash 16262 [003] 7317703.352258: syscalls:sys_enter_fcntl: fd: 0x000000ff, cmd: 0x00000001, arg: 0x7ffd268ed09c
+            bash 16262 [003] 7317703.352259: syscalls:sys_exit_fcntl: 0xfffffffffffffff7
+            bash 16262 [003] 7317703.352261: syscalls:sys_enter_dup2: oldfd: 0x00000004, newfd: 0x000000ff
+            bash 16262 [003] 7317703.352264: syscalls:sys_exit_dup2: 0xff
+            bash 16262 [003] 7317703.352266: syscalls:sys_enter_close: fd: 0x00000004
+            bash 16262 [003] 7317703.352267: syscalls:sys_exit_close: 0x0
+            bash 16262 [003] 7317703.352268: syscalls:sys_enter_fcntl: fd: 0x000000ff, cmd: 0x00000002, arg: 0x00000001
+            bash 16262 [003] 7317703.352269: syscalls:sys_exit_fcntl: 0x0
+            bash 16262 [003] 7317703.352270: syscalls:sys_enter_fcntl: fd: 0x000000ff, cmd: 0x00000003, arg: 0x00000000
+            bash 16262 [003] 7317703.352271: syscalls:sys_exit_fcntl: 0x8000
+            bash 16262 [003] 7317703.352275: syscalls:sys_enter_newfstat: fd: 0x000000ff, statbuf: 0x7ffd268ecff0
+            bash 16262 [003] 7317703.352276: syscalls:sys_exit_newfstat: 0x0
+            bash 16262 [003] 7317703.352277: syscalls:sys_enter_lseek: fd: 0x000000ff, offset: 0x00000000, whence: 0x00000001
+            bash 16262 [003] 7317703.352278: syscalls:sys_exit_lseek: 0x0
+            bash 16262 [003] 7317703.352280: syscalls:sys_enter_brk: brk: 0x0086f000
+            bash 16262 [003] 7317703.352346: syscalls:sys_exit_brk: 0x86f000
+            bash 16262 [003] 7317703.352362: syscalls:sys_enter_read: fd: 0x000000ff, buf: 0x0086ca88, count: 0x0000003c
+            bash 16262 [003] 7317703.352365: syscalls:sys_exit_read: 0x3c
+            bash 16262 [003] 7317703.352447: syscalls:sys_enter_write: fd: 0x00000001, buf: 0x00866408, count: 0x00000019
+            bash 16262 [003] 7317703.352868: syscalls:sys_exit_write: 0x19
+            bash 16262 [003] 7317703.352884: syscalls:sys_enter_read: fd: 0x000000ff, buf: 0x0086ca88, count: 0x0000003c
+            bash 16262 [003] 7317703.352886: syscalls:sys_exit_read: 0x0
+            bash 16262 [003] 7317703.352890: syscalls:sys_enter_rt_sigprocmask: how: 0x00000000, nset: 0x7ffd268ecfb0, oset: 0x7ffd268ed030, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.352892: syscalls:sys_exit_rt_sigprocmask: 0x0
+            bash 16262 [003] 7317703.352893: syscalls:sys_enter_rt_sigprocmask: how: 0x00000002, nset: 0x7ffd268ed030, oset: 0x00000000, sigsetsize: 0x00000008
+            bash 16262 [003] 7317703.352894: syscalls:sys_exit_rt_sigprocmask: 0x0
+            bash 16262 [003] 7317703.352908: syscalls:sys_enter_exit_group: error_code: 0x00000000
