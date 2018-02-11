@@ -11,7 +11,6 @@
 int main(void) {
   int fd = shm_open("/tmpmem", O_RDWR | O_CREAT, 0666);
 
-
   char *buf = mmap((void*) 0x5000000, SIZE, PROT_READ | PROT_WRITE,
       MAP_SHARED, fd, 0);
   buf[0] = 41;
