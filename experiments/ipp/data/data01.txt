@@ -1,0 +1,48 @@
+IOADDRS: 40000060 400000c0
+0x80101448 (bcm2836_arm_irqchip_handle_irq, drivers/irqchip/irq-bcm2836.c:186) -> 0x8010148c (bcm2836_arm_irqchip_handle_irq, drivers/irqchip/irq-bcm2836.c:194)
+0x8010148c (bcm2836_arm_irqchip_handle_irq, drivers/irqchip/irq-bcm2836.c:194) -> 0x8010d8cc (handle_IPI, arch/arm/kernel/smp.c:595)
+0x801014c4 (bcm2836_arm_irqchip_handle_irq, drivers/irqchip/irq-bcm2836.c:200) -> 0x806fcefc (__irq_svc, arch/arm/kernel/entry-armv.S:230)
+0x8010d8cc (handle_IPI, arch/arm/kernel/smp.c:595) -> 0x8010d914 (handle_IPI, arch/arm/kernel/smp.c:600)
+0x8010d914 (handle_IPI, arch/arm/kernel/smp.c:600) -> 0x8010d95c (handle_IPI, arch/arm/kernel/smp.c:601)
+0x8010d95c (handle_IPI, arch/arm/kernel/smp.c:601) -> 0x8010d9bc (handle_IPI, arch/arm/kernel/smp.c:660)
+0x8010d9bc (handle_IPI, arch/arm/kernel/smp.c:660) -> 0x8010d9c4 (handle_IPI, arch/arm/kernel/smp.c:661)
+0x8010d9c4 (handle_IPI, arch/arm/kernel/smp.c:661) -> 0x801014c4 (bcm2836_arm_irqchip_handle_irq, drivers/irqchip/irq-bcm2836.c:200)
+0x801dcce8 (trace_hardirqs_off, kernel/trace/trace_irqsoff.c:480) -> 0x801dcd28 (trace_hardirqs_off, kernel/trace/trace_irqsoff.c:483)
+0x801dcd28 (trace_hardirqs_off, kernel/trace/trace_irqsoff.c:483) -> 0x806fceec (__irq_svc, arch/arm/kernel/entry-armv.S:219)
+0x801dce14 (trace_hardirqs_on, kernel/trace/trace_irqsoff.c:473) -> 0x801dce70 (trace_hardirqs_on, kernel/trace/trace_irqsoff.c:476)
+0x801dce70 (trace_hardirqs_on, kernel/trace/trace_irqsoff.c:476) -> 0x806fcf00 (__irq_svc, arch/arm/kernel/entry-armv.S:230)
+0x806fcea0 (__irq_svc, arch/arm/kernel/entry-armv.S:218) -> 0x801dcce8 (trace_hardirqs_off, kernel/trace/trace_irqsoff.c:480)
+0x806fceec (__irq_svc, arch/arm/kernel/entry-armv.S:219) -> 0x80101448 (bcm2836_arm_irqchip_handle_irq, drivers/irqchip/irq-bcm2836.c:186)
+0x806fcefc (__irq_svc, arch/arm/kernel/entry-armv.S:230) -> 0x801dce14 (trace_hardirqs_on, kernel/trace/trace_irqsoff.c:473)
+0x806fcf00 (__irq_svc, arch/arm/kernel/entry-armv.S:230) -> 0x806fcf0c (__irq_svc, arch/arm/kernel/entry-armv.S:230)
+0x806fcf0c (__irq_svc, arch/arm/kernel/entry-armv.S:230) -> 0xffff0018 ($a, arch/arm/kernel/entry-armv.S:1220)
+0xffff0010 ($a, arch/arm/kernel/entry-armv.S:1218) -> 0xffff10a0 (vector_dabt, arch/arm/kernel/entry-armv.S:1108)
+0xffff0018 ($a, arch/arm/kernel/entry-armv.S:1220) -> 0xffff1020 (vector_irq, arch/arm/kernel/entry-armv.S:1085)
+0xffff1020 (vector_irq, arch/arm/kernel/entry-armv.S:1085) -> 0xffff0010 ($a, arch/arm/kernel/entry-armv.S:1218)
+0xffff1020 (vector_irq, arch/arm/kernel/entry-armv.S:1085) -> 0xffff103c (vector_irq, arch/arm/kernel/entry-armv.S:1085)
+0xffff103c (vector_irq, arch/arm/kernel/entry-armv.S:1085) -> 0x806fcea0 (__irq_svc, arch/arm/kernel/entry-armv.S:218)
+0xffff10a0 (vector_dabt, arch/arm/kernel/entry-armv.S:1108) -> 0xffff0010 ($a, arch/arm/kernel/entry-armv.S:1218)
+IOADDRS: 40000060 400000c0
+80101448 8010148c
+8010148c 8010d8cc
+801014c4 806fcefc
+8010d8cc 8010d914
+8010d914 8010d95c
+8010d95c 8010d9bc
+8010d9bc 8010d9c4
+8010d9c4 801014c4
+801dcce8 801dcd28
+801dcd28 806fceec
+801dce14 801dce70
+801dce70 806fcf00
+806fcea0 801dcce8
+806fceec 80101448
+806fcefc 801dce14
+806fcf00 806fcf0c
+806fcf0c ffff0018
+ffff0010 ffff10a0
+ffff0018 ffff1020
+ffff1020 ffff0010
+ffff1020 ffff103c
+ffff103c 806fcea0
+ffff10a0 ffff0010
